@@ -1,0 +1,411 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+body {
+  font-family: 'Luckiest Guy', cursive;
+  background-color: rgb(0, 255, 76);
+}
+
+.marquee {
+  margin-top: 30px;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.marquee span {
+    
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll 45s linear infinite;
+  font-size: 150px;
+}
+
+@keyframes scroll {
+  0%   { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  margin-top: 0px;
+  padding: 10px 40px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-radius: 0 0 15px 15px;
+  position: sticky;   /* always on top when scrolling */
+  top: 0;
+  z-index: 1002;
+}
+
+.top-bar .logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: orangered;
+  font-family: 'Luckiest Guy', cursive;
+}
+
+.account-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-family: "Playfair Display", serif;
+}
+
+.account-info .user-name {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+
+.account-info button {
+  padding: 8px 15px;
+  font-size: 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  color: white;
+}
+
+.login-btn {
+  background-color: orangered;
+}
+
+.signup-btn {
+  background-color: #4CAF50;
+}
+
+.account-info button:hover {
+  opacity: 0.8;
+}
+/* Modal background */
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 2000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal box */
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  width: 350px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+/* Close button (X) */
+.close-btn {
+  position: absolute;
+  top: 10px; right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Form inputs */
+#auth-form input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Form button */
+#auth-form button {
+  padding: 10px 20px;
+  background: orangered;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#auth-form button:hover {
+  background: #e55300;
+}
+
+/* Switch link */
+#switch-text {
+  margin-top: 15px;
+  font-size: 14px;
+}
+#switch-text a {
+  color: #4CAF50;
+  cursor: pointer;
+}
+
+
+
+.container {
+  position: relative;       
+  display: flex;            
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.left{
+  flex: 1;
+  height: 200px;
+  text-align: center;
+  font-size: 40px;
+  z-index: 1;               
+  position: relative;
+  top: -30px;
+}
+
+.middle {
+  position: absolute;       
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;               
+}
+
+.middle img {
+  width: 400px;             
+  height: auto;
+  transition: transform 1s;
+}
+
+.middle img:hover {
+  
+  transform: scale(1.2);
+}
+.menu5{
+  width: 500px;
+  height: 498px;
+  margin: 20px auto;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: 0.3s ease-in-out;
+}
+.menu1:hover, .menu2:hover, .menu3:hover, .menu4:hover, .menu5:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transform: scale(1.02);
+  transition: 0.3s ease-in-out;
+}
+
+.menu1, .menu2 {
+  background-color: white;
+  border-radius: 20px;
+  margin: 30px auto;
+  width: 90%;
+  height: 200px;
+
+  display: flex;              
+  align-items: center;        
+  padding: 20px;
+  transition: 0.3s ease-in-out;
+}
+
+.container-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 30px;
+}
+
+
+.container3 {
+  width: 45%;
+}
+
+.menu3, .menu4 {
+  background-color: white;
+  border-radius: 20px;
+  margin: 20px 0;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  padding: 20px;
+  transition: 0.3s ease-in-out;
+}
+
+
+
+.coffee {
+  height: 300px;
+  width: 320px;
+  margin-top: 20px;
+  border-radius: 20px;
+  transition: 0.3s ease-in-out;
+}
+.coffee:hover {
+  transform: scale(1.1) rotate(-3deg);
+
+}
+
+.menu1 img, .menu2 img, .menu3 img, .menu4 img {
+  width: 180px;       
+  height: 150px;      
+  object-fit: cover;  
+  border-radius: 15px;
+  margin-right: 20px;
+  
+}
+.menu1img, .menu2img, .menu3img, .menu4img{
+  transition: transform 0.4s ease-in-out;
+}
+.menu1img:hover, .menu2img:hover, .menu3img:hover, .menu4img:hover {
+  transform: scale(1.1) rotate(-3deg);
+}
+.container5 {
+  font-family: "Playfair Display", serif;
+  font-style: normal;
+}
+.team{
+  margin-left: 280px;
+}
+
+.workers{
+  background-color: white;
+  width: 75%;
+  align-items: center;
+  
+  height: 600px;
+  margin: 20px auto;
+  padding: 10px 80px 0px 80px;
+  border-radius: 20px;
+  transition: 0.3s ease-in-out;
+}
+.workers:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transform: scale(1.02);
+  transition: 0.3s ease-in-out;
+}
+.Workerimg{
+  height: 300px;
+  width: 50%;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  margin: 40px auto;
+  transition: transform 0.4s ease-in-out;
+}
+.Workerimg:hover {
+  transform: scale(1.1) rotate(-3deg);
+}
+.menu1 {
+  position: relative; /* <-- add this */
+}
+
+.menu1 button {
+  position: absolute;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  color: white;
+  background-color: orangered;
+  right: 20px;   /* distance from right */
+  bottom: 20px;  /* distance from bottom */
+}
+
+.menu2 button, .menu3 button, .menu4 button {
+  position: absolute;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  color: white;
+  background-color: orangered;
+}
+
+.menu5 {
+  position: relative; /* parent reference */
+}
+
+.menu5 button {
+  position: absolute;
+  bottom: 20px;   /* distance from bottom of card */
+  left: 50%;      /* center horizontally */
+  transform: translateX(-50%); /* perfect horizontal center */
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  color: white;
+  background-color: orangered
+}
+
+
+
+.menu-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative; /* allows absolute button placement */
+  height: 100%;
+}
+
+.menu-text button {
+  position: absolute;
+  right: 20px;   
+  bottom: 20px;  
+  margin-right: 10px;
+}
+.cart-box {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 250px;
+  background: wheat;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  z-index: 1001;
+}
+.logout-btn {
+  background-color: #e63946;  /* red */
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 14px;
+}
+
+.logout-btn:hover {
+  background-color: #b71c1c; /* darker red on hover */
+  opacity: 0.9;
+}
+@media (max-width: 768px) {
+  .container3, .container4 {
+    max-width: 100%;
+  }
+
+  .menu1, .menu2, .menu3, .menu4, .menu5 {
+    flex-direction: column;   /* stack image + text */
+    height: auto;
+  }
+
+  .menu1 img, .menu2 img, .menu3 img, .menu4 img {
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}
+
+
+
